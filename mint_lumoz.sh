@@ -29,13 +29,13 @@ install_and_start() {
 
     if [ "$gpu_choice" -eq 1 ]; then
         # 下载并解压Nvidia矿机
-        wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_cuda.tar.gz
-        tar -zvxf moz_prover-v1.0.1_cuda.tar.gz
+        wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_cuda.tar.gz
+        tar -zvxf moz_prover-v1.0.2_cuda.tar.gz
         cd moz_prover || exit
     elif [ "$gpu_choice" -eq 2 ]; then
         # 下载并解压AMD矿机
-        wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.1/moz_prover-v1.0.1_ocl.tar.gz
-        tar -zvxf moz_prover-v1.0.1_ocl.tar.gz
+        wget https://github.com/6block/zkwork_moz_prover/releases/download/v1.0.2/moz_prover-v1.0.2_ocl.tar.gz
+        tar -zvxf moz_prover-v1.0.2_ocl.tar.gz
         cd moz_prover || exit
     else
         echo "无效选项，返回主菜单"
@@ -57,7 +57,7 @@ install_and_start() {
 # 卸载挖矿函数
 uninstall() {
     echo "正在卸载挖矿程序..."
-    rm -rf moz_prover moz_prover-v1.0.1_cuda.tar.gz moz_prover-v1.0.1_ocl.tar.gz
+    rm -rf moz_prover moz_prover-v1.0.2_cuda.tar.gz moz_prover-v1.0.2_ocl.tar.gz
     echo "挖矿程序已卸载"
 }
 
